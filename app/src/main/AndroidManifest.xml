@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Click4Treats">
         <activity
+            android:name=".activity_restaurants"
+            android:exported="false" />
+        <activity
             android:name=".RestaurantsActivity"
             android:exported="false" />
         <activity

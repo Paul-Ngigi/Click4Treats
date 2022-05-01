@@ -19,17 +19,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mFindRestaurantsButton = (Button)findViewById(R.id.findRestaurantsBtn);
         mLocationEditText = (EditText)findViewById(R.id.locationEditTxt);
+
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(MainActivity.this, "Loading...\nProcessing available restaurants for you",
-//                        Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this, "Loading...\nProcessing available restaurants for you", Toast.LENGTH_LONG).show();
                 String location = mLocationEditText.getText().toString();
-                Log.d(TAG, location);
+//                Log.d(TAG, location);
                 Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                intent.putExtra("location", location);
                 startActivity(intent);
             }
         });
