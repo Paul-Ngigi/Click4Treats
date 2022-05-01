@@ -33,4 +33,16 @@
         android:text="Find Restaurants"
         android:textColor="@color/white" />
 
+    <EditText
+        android:id="@+id/locationEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/findRestaurantsBtn"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Input search location"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp" />
+
 </RelativeLayout>
