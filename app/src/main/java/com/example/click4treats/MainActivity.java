@@ -2,6 +2,7 @@ package com.example.click4treats;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Loading...\nProcessing available restaurants for you",
-                        Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this, "Loading...\nProcessing available restaurants for you",
+//                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                startActivity(intent);
             }
         });
     }
